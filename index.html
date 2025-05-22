@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Medicamentos </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Medicamentos</h1>
+        <h2>Datos del paciente</h2>
+        
+        <form id="medicamentoForm">
+            <div class="form-group">
+                <label for="paciente_id">ID Paciente:</label>
+                <input type="text" id="paciente_id" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="paciente_nombre">Nombre Paciente:</label>
+                <input type="text" id="paciente_nombre" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="medicamento_nombre">Medicamento:</label>
+                <input type="text" id="medicamento_nombre" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="dosis">Dosis:</label>
+                <input type="text" id="dosis" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="frecuencia">Frecuencia:</label>
+                <input type="text" id="frecuencia" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="via_administracion">Vía de Administración:</label>
+                <select id="via_administracion" required>
+                    <option value="oral">Oral</option>
+                    <option value="intravenosa">Intravenosa</option>
+                    <option value="intramuscular">Intramuscular</option>
+                    <option value="subcutanea">Subcutánea</option>
+                    <option value="topica">Tópica</option>
+                    <option value="inhalatoria">Inhalatoria</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="profesional_salud">Profesional de Salud:</label>
+                <input type="text" id="profesional_salud" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="observaciones">Observaciones:</label>
+                <textarea id="observaciones"></textarea>
+            </div>
+            
+            <button type="submit">Registrar Medicamento</button>
+        </form>
+        
+        <div class="search-section">
+            <h3>Consultar Medicamentos</h3>
+            <input type="text" id="searchPacienteId" placeholder="Ingrese ID del paciente">
+            <button onclick="buscarMedicamentos()">Buscar</button>
+            <div id="resultados"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
