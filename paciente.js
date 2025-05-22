@@ -1,4 +1,5 @@
 // Configura la URL del backend basada en el entorno
+const API_URL = 'https://backend-m-29g4.onrender.com'; 
 const API_URL = window.location.hostname === 'localhost' 
     ? 'http://localhost:8000' 
     : 'https://hce-backend.onrender.com'; // Reemplaza con tu URL real del backend
